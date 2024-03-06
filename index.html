@@ -1,3 +1,7 @@
+ 
+Make sure to use your own `botId` and `clientId`.
+ 
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -59,21 +63,28 @@
             style="border: none;"
             srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
             <script>
-                window.botpressWebChat.init({
-                    "composerPlaceholder": "Chat with bot",
-                    "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
-                    "botId": "003cd3d4-d9ff-4908-81b4-832002d50fad",
-                    "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-                    "messagingUrl": "https://messaging.botpress.cloud",
-                    "clientId": "003cd3d4-d9ff-4908-81b4-832002d50fad",
-                    "webhookId": "00f06ab0-a7da-4957-80bf-d6fe2ba6275f",
-                    "lazySocket": true,
-                    "themeName": "prism",
-                    "frontendVersion": "v1",
-                    "showPoweredBy": true,
-                    "theme": "prism",
-                    "themeColor": "#2563eb"
-                });
+              window.botpressWebChat.init({
+                  'composerPlaceholder': 'Chat with bot',
+                  'botConversationDescription': 'This chatbot was built surprisingly fast with Botpress',
+                  'botName': 'Name',
+                  'botId': '003cd3d4-d9ff-4908-81b4-832002d50fad',
+                  'hostUrl': 'https://cdn.botpress.cloud/webchat/v1',
+                  'messagingUrl': 'https://messaging.botpress.cloud',
+                  'clientId': '003cd3d4-d9ff-4908-81b4-832002d50fad',
+                  'enableConversationDeletion': true,
+                  'showPoweredBy': true,
+                  'className': 'webchatIframe',
+                  'containerWidth': '100%25',
+                  'layoutWidth': '100%25',
+                  'hideWidget': true,
+                  'showCloseButton': false,
+                  'disableAnimations': true,
+                  'closeOnEscape': false,
+                  'showConversationsButton': false,
+                  'enableTranscriptDownload': false,
+                  'stylesheet':'https://webchat-styler-css.botpress.app/prod/code/3fcd3e4e-d5bc-4bf5-8699-14b621b3ada2/v31782/style.css'
+                  
+              });
             window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
             </script></body>"
             width="100%"
